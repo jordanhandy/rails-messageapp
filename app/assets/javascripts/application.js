@@ -16,9 +16,22 @@
 //= require turbolinks
 //= require semantic-ui
 //= require_tree .
+
+// scrolling function
+// if there is more than one message
+// this will scroll to bottom
+scroll_bottom = function(){
+  if ($('#messages').length > 0){
+    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+}
+
+// on document load, load the Semantic UI JavaScript requirements
+// as well as the scroll_bottom function
 $(document).on('turbolinks:load',function(){
     $('.ui.dropdown').dropdown();
     $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+  scroll_bottom();
 })
