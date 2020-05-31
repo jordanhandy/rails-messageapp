@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     # whitelist method for whitelisting params to be written
     # to the db
     def message_params
-        params.require[:message].permit(:body)
+        params.require(:message).permit(:body)
     end
 
     # the message_render method used by ActionCable
