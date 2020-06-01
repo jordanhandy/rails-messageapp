@@ -1,24 +1,35 @@
 # README
+## MessageApp - Rails
+### Concept
+This is an application that allows users to login and post messages into a chatroom, realtime through the WebSocket protocol
+### Components
+* Rails 5
+* ActionCable
+* Semantic UI
+#### Models
+* Application Record
+* User
+* Message
+#### Routes
+##### GET
+* Chatroom
+* Login
+##### POST
+* Messages
+#### Controllers
+* Application Controller
+* Chatroom Controller
+* Messages Controller
+* Sessions Controller
+#### Views
+* Chatroom
+* Layouts
+* Messages
+* Sessions
+##### Partials
+* Messages
+* Naviagion
+# TODO
+* Add frontend functionality for user signup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can use db:seed to seed the database with test data
